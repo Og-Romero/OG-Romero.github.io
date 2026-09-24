@@ -1,0 +1,824 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+a{text-decoration: none; color: black;}
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.7em;}
+h3 {font-size: 2em;}
+p {font-size: 1.5em;}
+ul {list-style: none;}
+li{font-size: 1.25em;}
+
+html{
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0%;
+    text-align: center;
+    background: #f5f5f5;
+
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.ITZ{
+    color: #e10600;
+}
+
+.maya{
+    color: #32EEE2;
+}
+
+header {
+    position: fixed;
+    background-color: rgb(5, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    z-index: 9999;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    color: #e10600;
+    font-size: 1.60em;
+}
+
+header .container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+header a{
+    padding: 15px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #71797e;
+}
+
+header a:hover{
+    color: #e10600;
+    font-size: 1.10em;
+    text-shadow: #71797e, 5px;
+}
+
+header img{
+    width: 25%;
+    height:30%;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-color: black;
+    background-image: linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    )
+    ,url("imagenes/itz&maya-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #ffffff;
+}
+
+#nosotros .container{
+    text-align: center;
+    padding: 100px 50px;
+    height: 100%;
+    font-size: 1em;
+    color: #111111;
+}
+
+#nosotros a{
+    text-decoration-line: underline;
+}
+
+#nosotros a:hover{
+    color: #e10600;
+    font-size: 1.10em;
+    text-shadow: #71797e, 5px;
+    text-decoration: none;
+}
+
+#nosotros h2::after {
+    content: "";
+    width: 220px;
+    height: 4px;
+    background: #e10600;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+
+
+#productos{
+ background-color: #e10600;
+ color: #ffffff;
+ padding-top: 10px;
+ text-align: center;
+}
+
+#productos h2{
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+#productos h2::after {
+    content: "";
+    width: 220px;
+    height: 4px;
+    background: #ffffff;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#productos .container{
+    padding: 120px 30px;
+}
+
+#productos .carta{
+    
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+
+}
+
+#wp-carta{
+    background-image: linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    )
+    ,url("imagenes/wp_logo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.carta:nth-child(2){
+     background-image: linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    )
+    ,url("imagenes/dazon-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.carta:nth-child(3){
+     background-image: linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    )
+    ,url("imagenes/vento_logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+.marcas{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.carta{
+    background:linear-gradient(
+        180deg,
+        #c70404,
+        #990000
+    );
+
+    border-radius:18px;
+    overflow:hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+
+    transition:all .35s ease;
+
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.carta h3{
+    color:#fff;
+    text-align:center;
+
+    font-size:1.5rem;
+
+    margin:20px 15px 10px;
+}
+
+.carta p{
+    color:#fff;
+
+    text-align:center;
+
+    line-height:1.7;
+
+    padding:0 20px 25px;
+
+    font-size:1rem;
+}
+
+.carta:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.35);
+}
+
+.carta{
+position:relative;
+}
+
+.carta::before{
+ content:"";
+ position: absolute;
+ top:0;
+ left:0;
+
+ width:100%;
+ height:5px; 
+
+ background:
+ linear-gradient(
+ 90deg,
+ #ffffff,
+ #e10600,
+ #ffffff
+);
+}
+
+.carta h3::after{
+content:"";
+display:block;
+width:50px;
+height:3px;
+background:#fff;
+margin:10px auto 0;
+border-radius:10px;
+}
+
+
+#conversiones{
+    background: #f5f5f5;
+    padding: 90px 20px;
+}
+
+#conversiones h2{
+    text-align: center;
+    color: #e10600;
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#conversiones h2::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:4px;
+    background:#e10600;
+    margin:15px auto;
+    border-radius:10px;
+}
+
+.conversion-img{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+ 
+.conversion-img img{
+max-width:90%;
+height:auto;
+}
+
+/* TARJETAS */
+
+.conversion-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+    margin-bottom:50px;
+
+    display:flex;
+    flex-direction:column;
+
+    transition:.35s;
+}
+
+.conversion-card:hover{
+    transform:translateY(-8px);
+}
+
+.conversion-img{
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #eeeeee
+    );
+}
+
+.conversion-img img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+/* TEXTO */
+
+.conversion-content{
+    padding:35px;
+}
+
+.conversion-content h3{
+    color:#e10600;
+    margin-bottom:20px;
+    font-size:1.6rem;
+}
+
+.conversion-content ul{
+    list-style:none;
+    padding:0;
+}
+
+.conversion-content li{
+    margin-bottom:15px;
+    color:#333;
+    font-size:1.05rem;
+    padding-left:10px;
+    border-left:3px solid #e10600;
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+.contact-section {
+    background: #111111;
+    padding: 60px 20px;
+    padding-top: 110px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #e10600;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.contact-section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #e10600;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    color: #71797e;
+}
+
+/* ==========================
+   MAPAS
+========================== */
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.map-card,
+.office-card {
+    background: #e10600;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+    transition: .3s ease;
+}
+
+.map-card:hover,
+.office-card:hover {
+    transform: translateY(-5px);
+}
+
+.map-card iframe,
+.office-card iframe {
+    width: 100%;
+    height: 280px;
+    border: 0;
+}
+
+.map-card p,
+.office-card p {
+    padding: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ==========================
+   OFICINA
+========================== */
+
+.office-card {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+.contact-container {
+    margin-top: 80px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.info-box {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+    border-top: 4px solid #e10600;
+}
+
+.info-box h3 {
+    color: #71797e;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ==========================
+   REDES
+========================== */
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social {
+    text-decoration: none;
+    color: #000;
+    background: #f4f4f4;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 700;
+    transition: .35s ease;
+}
+
+.facebook:hover {
+    color: white;
+    background: #1877f2;
+}
+
+.instagram:hover {
+    color: white;
+    background: linear-gradient(
+        45deg,
+        #f58529,
+        #dd2a7b,
+        #8134af,
+        #515bd4
+    );
+}
+
+.tiktok:hover {
+    color: white;
+    background: linear-gradient(
+        45deg,
+        #000000,
+        #25f4ee,
+        #fe2c55
+    );
+}
+
+.whatsapp:hover {
+    color: white;
+    background: #25d366;
+}
+
+/* ==========================
+   CONTACTO INFO
+========================== */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info p {
+    background: #f6f6f6;
+    padding: 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.contact-info p:hover {
+    background: #e10600;
+    color: white;
+}
+
+/*=========================
+        FOOTER
+==========================*/
+
+footer{
+    background:#000;
+    color:#fff;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-top:4px solid #e10600;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.footer-logo{
+    width:140px;
+    margin-bottom:15px;
+
+    transition:.3s;
+}
+
+.footer-logo:hover{
+    transform:scale(1.05);
+}
+
+.footer-slogan{
+    font-size:1rem;
+    letter-spacing:3px;
+    color:#71797e;
+
+    margin-bottom:20px;
+}
+
+.footer-divider{
+    width:80px;
+    height:3px;
+
+    background:#e10600;
+
+    margin:0 auto 20px;
+
+    border-radius:50px;
+}
+
+.footer-copy{
+    font-size:.95rem;
+    color:#fff;
+}
+
+@media (min-width: 950px){
+    header{
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        font-size: 1.5em;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    header nav a{
+        flex-direction: row;
+        padding-bottom: 10px;
+        padding-right: 30px;
+    }
+
+    header img{
+        height: 100px;
+        width: 200px;
+    }
+
+    #hero{
+        height: 100vh;
+    }
+
+    #hero h1{
+        font-size: 5em;
+
+    }
+
+
+    #nosotros .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #nosotros .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: end;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: black;
+    }
+
+    #nosotros h2{
+        margin-top: 0px;
+    }
+
+    #nosotros .img-cont{
+        background-image: url("imagenes/itz&maya-logo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 600px;
+        width: 400px; 
+        padding-left: 600px;
+    }
+
+    
+    #productos .marcas{
+        display: flex;
+        justify-content: center;
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    #productos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #productos h2{
+        font-size: 4em;
+    }
+
+    #productos h3{
+        padding-bottom: 50px;
+        margin-top: 0;
+    }
+
+    #productos .carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: #aa0803;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #wp-carta{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("imagenes/wp_logo.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("imagenes/dazon-logo.png");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("imagenes/vento_logo.png");
+
+    }
+
+.carta::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px; 
+    background:
+    linear-gradient(
+    90deg,
+    #ffffff,
+    #e10600,
+    #ffffff
+);
+}
+
+
+.conversion-card{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+}
+.conversion-card.reverse .conversion-img{
+    order:2;
+}
+
+.conversion-card.reverse .conversion-content{
+    order:1;
+}    
+.branches-grid {
+        grid-template-columns: repeat(2, 1fr);
+}    
+.contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+footer .container{
+    justify-content: flex-end;
+}
+}
+
+@media (min-width: 1200px) {
+.marcas{
+    grid-template-columns:
+    repeat(3,1fr);
+}
+
+.conversion-content{
+    padding:50px;
+}
+
+.conversion-content h3{
+    font-size:2rem;
+}
+.conversion-content li{
+    font-size:1.15rem;
+}
+.branches-grid {
+    grid-template-columns: repeat(4, 1fr);
+}    
+
+}
