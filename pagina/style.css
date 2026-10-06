@@ -68,6 +68,7 @@ header .container {
 
 header nav{
     display: flex;
+    flex-direction: row;
     text-align: center;
     padding-bottom: 10px;
 }
@@ -130,7 +131,7 @@ header img{
 
 #nosotros h2::after {
     content: "";
-    width: 220px;
+    width: 20px;
     height: 4px;
     background: #e10600;
     display: block;
@@ -204,7 +205,7 @@ header img{
     rgba(0,0,0,.5),
     rgba(0,0,0,.5)
     )
-    ,url("imagenes/vento_logo.png");
+    ,url("imagenes/Logo-alessia.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -495,7 +496,7 @@ height:auto;
 .info-box {
     background: #ffffff;
     border-radius: 18px;
-    padding: 30px;
+    padding: 30px 0;
     box-shadow: 0 8px 25px rgba(0,0,0,.10);
     border-top: 4px solid #e10600;
 }
@@ -757,7 +758,7 @@ footer{
             rgba(0,0,0,0.5),
             rgba(0,0,0,0.5)
         )
-        ,url("imagenes/vento_logo.png");
+        ,url("imagenes/Logo-alessia.png");
 
     }
 
